@@ -40,7 +40,7 @@ function searchImages(query) {
             });
         } else {
             iziToast.error({
-                title: 'Error';
+                title: 'Error',
                 message: 'Sorry, there are no images matching your search query. Please try again!',
                 position: 'topRight'
             });
