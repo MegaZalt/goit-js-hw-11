@@ -31,6 +31,11 @@ try {
 function renderGallery(images) {
     gallery.innerHTML = '';
 
+    if(images.length === 0) {
+        gallery.innerHTML = '<p>No images found.</p>';
+        return;
+    }
+
     images.forEach(image => {
         const imgEl = document.createElement('img');
         imgEl.src = image.webformatURL;
