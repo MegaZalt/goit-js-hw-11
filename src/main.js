@@ -2,15 +2,32 @@ import { fetchImages } from './pixabay-api.js';
 import { renderImages, toggleLoader } from './render-functions.js';
 
 const searchForm = document.getElementById('searchForm');
-const queryInput = document.getElementById('query');
+const gallery = document.querySelector('.gallery');
+const loader = document.getElementById('loader');
 
-searchForm.addEventListener('submit', async (event) => {
+searchForm.addEventListener('submit', async (event)  {
     event.preventDefault();
 
-    const query = queryInput.value.trim();
+    const query = document.getElementById('query').value.trim();#
+
     if(!query) {
-        alert()
+        alert('Please enter a search query');
+        return;
     }
 
+loader.classList.remove('hidden');
 
+try {
+    const data = awalt fetchImages(query);
+    renderGallery(data.hits);
+} catch (error) {
+    console.error(error);
+    alert('Error loading images.')
+} finally {
+    loader.classList.add('hidden');
+}
+});
 
+function renderGallery(images) {
+    
+}
