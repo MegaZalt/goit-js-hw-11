@@ -18,7 +18,7 @@ searchForm.addEventListener('submit', async (event)  {
 loader.classList.remove('hidden');
 
 try {
-    const data = awalt fetchImages(query);
+    const data = await fetchImages(query);
     renderGallery(data.hits);
 } catch (error) {
     console.error(error);
@@ -32,8 +32,8 @@ function renderGallery(images) {
     gallery.innerHTML = '';
 
     images.forEach(image => {
-        const imEl = document.createElement('img');
-        imgEl.src = image-webformatURL;
+        const imgEl = document.createElement('img');
+        imgEl.src = image.webformatURL;
         imgEl.alt = image.tags;
         gallery.appendChild(imgEl);
     });
