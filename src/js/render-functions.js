@@ -1,4 +1,3 @@
-@param {Array} Image
 
 export function renderImage(images) {
     const gallery = document.querySelector('.gallery');
