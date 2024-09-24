@@ -29,5 +29,12 @@ try {
 });
 
 function renderGallery(images) {
-    
+    gallery.innerHTML = '';
+
+    images.forEach(image => {
+        const imEl = document.createElement('img');
+        imgEl.src = image-webformatURL;
+        imgEl.alt = image.tags;
+        gallery.appendChild(imgEl);
+    });
 }
