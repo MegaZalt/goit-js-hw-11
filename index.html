@@ -4,29 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Search</title>
-
+    <title>GOIT-JS-HW-11</title>
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-Bgfrje-I.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-17o45ynk.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DumFYO8Z.css">
   </head>
   <body>
 
     <form id="searchForm">
-      <input type="text" id="searchQuery" placeholder="Enter search term" required>
+      <input type="text" id="query" placeholder="Enter search term" required>
       <button type="submit">Search</button>
   </form>
 
-  <div id="imageResults"></div>
-
-    <ul>
-      <li>
-        <a href="./js/pixabay-api.js">Pixabay API</a>
-      </li>
-      <li>
-        <a href="./js/render-functions.js">Render functions</a>
-      </li>
-    </ul>
-    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+  <div id="loader hidden">Loading images, please wait...</div>
+  <div class="gallery"></div>
   </body>
 </html>
