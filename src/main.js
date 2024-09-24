@@ -5,7 +5,7 @@ import iziToast from 'izitoast';
 
 const searchForm = document.getElementById('searchForm');
 const gallery = document.querySelector('.gallery');
-const loader = document.getElementById('loader');
+const loader = document.getElementById('.loader');
 
 searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
