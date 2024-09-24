@@ -5,7 +5,7 @@ const searchForm = document.getElementById('searchForm');
 const gallery = document.querySelector('.gallery');
 const loader = document.getElementById('loader');
 
-searchForm.addEventListener('submit', async (event)  {
+searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const query = document.getElementById('query').value.trim();
