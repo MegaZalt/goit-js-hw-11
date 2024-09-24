@@ -1,5 +1,3 @@
-import { fetchImages } from './pixabay-api.js';
-import { renderImages, toggleLoader } from './render-functions.js';
 
 const searchForm = document.getElementById('searchForm');
 const gallery = document.querySelector('.gallery');
