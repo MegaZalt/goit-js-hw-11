@@ -8,7 +8,7 @@ const loader = document.getElementById('loader');
 searchForm.addEventListener('submit', async (event)  {
     event.preventDefault();
 
-    const query = document.getElementById('query').value.trim();#
+    const query = document.getElementById('query').value.trim();
 
     if(!query) {
         alert('Please enter a search query');
