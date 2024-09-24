@@ -1,3 +1,7 @@
+// main.js
+import 'izitoast/dist/css/iziToast.css'; 
+import iziToast from 'izitoast'; 
+
 
 const searchForm = document.getElementById('searchForm');
 const gallery = document.querySelector('.gallery');
