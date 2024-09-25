@@ -1,5 +1,5 @@
 
-export function renderImage(images) {
+export function renderGallery(images) {
     const gallery = document.querySelector('.gallery');
     gallery.innerHTML = '';
 
