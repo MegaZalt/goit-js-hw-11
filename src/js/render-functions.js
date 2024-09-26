@@ -1,3 +1,4 @@
+import simpleLightbox from "simplelightbox";
 
 export function renderGallery(images) {
     const gallery = document.querySelector('.gallery');
@@ -20,13 +21,13 @@ export function renderGallery(images) {
     .join('');
 
     gallery.innerHTML = markup;
+
+    const lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',
+      captionsDelay: 250,
+    });
+
+    lightbox.refresh();
   }
 
-  export function toggleLoader(isVisible) {
-    const loader = document.getElementById('loader');
-    if(isVisible) {
-      loader.classList.remove('hidden');
-    } else {
-      loader.classList.add('hidden');
-    }
-  }
+  
