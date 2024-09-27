@@ -14,7 +14,7 @@ export function renderGallery(images) {
   }
 
   const markup = images.map(image => {
-    `<div class="gallery-item">
+    return`<div class="gallery-item">
         <a href="${image.largeImageURL}">
           <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
         </a>
