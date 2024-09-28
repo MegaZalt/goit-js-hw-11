@@ -2,7 +2,7 @@
 import 'izitoast/dist/css/iziToast.css';
 import iziToast from 'izitoast';
 import { fetchImages } from './js/pixabay-api';
-import { renderGallery } from './js/render-gallery';
+import { renderGallery } from './js/render-functions';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 
