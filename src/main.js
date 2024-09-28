@@ -2,6 +2,7 @@
 import 'izitoast/dist/css/iziToast.css';
 import iziToast from 'izitoast';
 import { fetchImages } from './js/pixabay-api';
+import { renderGallery } from './js/render-gallery';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 
@@ -15,6 +16,10 @@ function toggleLoader(isVisible) {
   } else {
     loader.classList.add('hidden');
   }
+}
+
+function clearGallery() {
+  gallery.innerHTML = '';
 }
 
 searchForm.addEventListener('submit', async event => {
@@ -32,6 +37,7 @@ searchForm.addEventListener('submit', async event => {
     return;
   }
 
+  clearGallery();
   toggleLoader(true);
 
   try {
@@ -50,18 +56,4 @@ searchForm.addEventListener('submit', async event => {
   }
 });
 
-function renderGallery(images) {
-  gallery.innerHTML = '';
 
-  if (images.length === 0) {
-    gallery.innerHTML = '<p>No images found.</p>';
-    return;
-  }
-
-  images.forEach(image => {
-    const imgEl = document.createElement('img');
-    imgEl.src = image.webformatURL;
-    imgEl.alt = image.tags;
-    gallery.appendChild(imgEl);
-  });
-}
