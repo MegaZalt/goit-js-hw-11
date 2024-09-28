@@ -1,8 +1,8 @@
 // main.js
 import 'izitoast/dist/css/iziToast.css';
 import iziToast from 'izitoast';
-import { fetchImages } from './js/pixabay-api';
-import { renderGallery } from './js/render-functions';
+import { fetchImages } from './js/pixabay-api.js';
+import { renderGallery } from './js/render-functions.js';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 
