@@ -9,7 +9,7 @@ export function renderGallery(images) {
 
   if (images.length === 0) {
     gallery.innerHTML =
-      '<p>Sorry, there are no images matching your search query. Please try again!</p>';
+      '<p>No images. Please try again!</p>';
     return;
   }
 
