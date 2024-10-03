@@ -1,9 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+import '/dist/simple-lightbox.min.css';
 
 let lightbox = null;
 
-export function renderGallery(images) {
+export function simplelightbox renderGallery(images) {
   const gallery = document.querySelector('.gallery');
   gallery.innerHTML = '';
 
